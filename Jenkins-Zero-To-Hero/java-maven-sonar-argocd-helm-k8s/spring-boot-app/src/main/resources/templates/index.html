@@ -2,24 +2,126 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>CI/CD Master Class By Sathwick_Dutt</title>
+
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
     <link data-th-href="@{/css/main.css?{id}(id=${timestamp})}" rel="stylesheet">
-    <title>CI/CD Master Class By Abhishek Veeramalla</title>
+
+    <style>
+        body {
+            padding-top: 70px;
+        }
+        .hero {
+            background: linear-gradient(120deg, #007bff, #6610f2);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .feature-icon {
+            font-size: 40px;
+            color: #007bff;
+        }
+        .card {
+            transition: transform 0.2s ease;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            background: #222;
+            color: #aaa;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="#">Ultimate CI/CD Pipeline using Java</div></a>
+    <a class="navbar-brand" href="#">🚀 CI/CD Masterclass</a>
 </nav>
 
-<main role="main" class="container">
-    <div class="starter-template">
-        <h1 th:text="${title}">Default title.</h1>
-        <p th:text="${msg}">Default text.</p>
+<!-- HERO SECTION -->
+<section class="hero">
+    <h1 th:text="${title}">Build & Deploy Like a Pro 🚀</h1>
+    <p th:text="${msg}">
+        Learn how to automate your Java applications using modern CI/CD pipelines.
+    </p>
+    <a href="#" class="btn btn-light btn-lg m-2">View Project</a>
+    <a href="#" class="btn btn-outline-light btn-lg m-2">GitHub Repo</a>
+</section>
+
+<!-- FEATURES -->
+<div class="container mt-5">
+    <div class="row text-center">
+
+        <div class="col-md-4">
+            <div class="card p-4 shadow-sm">
+                <div class="feature-icon">⚙️</div>
+                <h4>Automation</h4>
+                <p>Automate build, test, and deployment with Jenkins & GitHub Actions.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-4 shadow-sm">
+                <div class="feature-icon">🐳</div>
+                <h4>Dockerized Apps</h4>
+                <p>Containerize Java apps using Docker for consistency across environments.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-4 shadow-sm">
+                <div class="feature-icon">☁️</div>
+                <h4>Cloud Deployment</h4>
+                <p>Deploy seamlessly to AWS, Kubernetes, or any cloud platform.</p>
+            </div>
+        </div>
+
     </div>
-</main>
+</div>
 
+<!-- PIPELINE STEPS -->
+<div class="container mt-5">
+    <h2 class="text-center mb-4">🔄 CI/CD Pipeline Flow</h2>
+
+    <div class="row text-center">
+        <div class="col-md-2">📥 Code</div>
+        <div class="col-md-2">🔨 Build</div>
+        <div class="col-md-2">🧪 Test</div>
+        <div class="col-md-2">📦 Package</div>
+        <div class="col-md-2">🚀 Deploy</div>
+        <div class="col-md-2">📊 Monitor</div>
+    </div>
+</div>
+
+<!-- ABOUT -->
+<div class="container mt-5">
+    <div class="card shadow-sm p-4">
+        <h3>👨‍💻 About This Project</h3>
+        <p>
+            This project demonstrates a complete CI/CD pipeline for Java applications.
+            It integrates tools like Jenkins, Docker, GitHub Actions, and Kubernetes
+            to automate the entire software delivery lifecycle.
+        </p>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="mt-5">
+    <p>© 2026 Sathwick Dutt | Built with ❤️ using Spring Boot & Thymeleaf</p>
+</footer>
+
+<!-- JS -->
 <script data-th-src="@{/js/main.js}"></script>
-</body>
 
+</body>
 </html>
